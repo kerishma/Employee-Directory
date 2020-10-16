@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import DataTable from '../DataTable';
-import NavBar from '../NavBar';
+import DataTable from '../DataTable/index';
+import NavBar from '../NavBar/index';
 import API from '../../units/API';
 import './DataArea.css';
 import DataAreaContext from '../../units/DataAreaContext';
@@ -54,7 +54,7 @@ const DataArea = () => {
       }
     };
     const sortedUsers = developerState.filteredUsers.sort(compareFnc);
-    
+
     const updatedHeadings = developerState.headings;
 
     setDeveloperState({
@@ -89,20 +89,22 @@ const DataArea = () => {
   }, []);
 
   return (
-  
     <DataAreaContext.Provider
       value={{ developerState, handleSearchChange, handleSort }}
     >
       <NavBar />
       <div className="data-area">
         {/* {console.log(developerState)} */}
-      
-        {developerState.filteredUsers.length > 0 ? 
-        <DataTable 
-        filteredUsers= {developerState.filteredUsers} 
-        headings= {developerState.headings} 
-        order={developerState.order} 
-        /> : <div></div>}
+
+        {developerState.filteredUsers.length > 0 ? (
+          <DataTable
+            filteredUsers={developerState.filteredUsers}
+            headings={developerState.headings}
+            order={developerState.order}
+          />
+        ) : (
+          <div></div>
+        )}
       </div>
     </DataAreaContext.Provider>
   );

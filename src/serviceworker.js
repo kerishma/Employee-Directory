@@ -69,7 +69,7 @@ const isLocalhost = Boolean(
         };
       })
       .catch(error => {
-        // console.error('Error during service worker registration:', error);
+        console.error('Error during service worker registration:', error);
       });
   }
   
