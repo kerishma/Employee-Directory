@@ -6,6 +6,7 @@
   .App {
     text-align: center;
     font-family: sans-serif;
+    background-color: rgb(221, 236, 241);
   }
   
   @keyframes App-logo-spin {

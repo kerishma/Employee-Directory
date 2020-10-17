@@ -5,7 +5,7 @@ function Header () {
     return (
         <div className="header">
             <h1>Employee Directory</h1>
-            <p>filter by Name</p>
+            <p>Filter by Name</p>
         </div>
     )
 }

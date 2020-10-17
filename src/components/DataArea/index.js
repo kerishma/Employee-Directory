@@ -105,7 +105,7 @@ const DataArea = () => {
         ) : (
           <div></div>
         )}
-      </div>
+      </div> 
     </DataAreaContext.Provider>
   );
 };
