@@ -10,8 +10,6 @@ import Header from './components/Header';
 // import SearchName from './components/SearchName';
 import "./App.css";
 
-// const PORT = process.env.PORT || 3000;
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 const App = () => {
   return (
