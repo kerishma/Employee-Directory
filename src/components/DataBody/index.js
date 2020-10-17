@@ -21,7 +21,7 @@ const DataBody = () => {
         {context.developerState.filteredUsers !== undefined && 
         context.developerState.filteredUsers[0].name !== undefined ? (
         context.developerState.filteredUsers.map
-        (({ login, name, picture, phone, email, dob }) => {
+        (({login,picture, name, phone, email, dob }) => {
             return (
               <tr key={login.uuid}>
                 <td data-th="Image" className="align-middle">
@@ -38,7 +38,8 @@ const DataBody = () => {
                   {phone}
                 </td>
                 <td data-th="Email" className="align-middle">
-                  <a href={"mailto:" + email} target="__blank">
+                  <a href={"mailto:" + email} 
+                  target="__blank">
                     {email}
                   </a>
                 </td>

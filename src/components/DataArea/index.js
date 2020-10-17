@@ -63,7 +63,7 @@ const DataArea = () => {
       headings: updatedHeadings,
     });
   };
-
+ 
   const handleSearchChange = (event) => {
     const filter = event.target.value;
     console.log(filter);
