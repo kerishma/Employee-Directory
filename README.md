@@ -21,9 +21,10 @@ Given a table of random users, when the user loads the page, a table of employee
 - JavaScript 
 
 ## Deployed App Link for Netlify
+https://main--epic-shaw-fc4646.netlify.app/
 
 ## gif Demo
-![Directory Demo](demo/!.gif)
+![Directory Demo](demo/Employee-Directory!.gif)
 
 ## Owner
 Kerishma Tarin
