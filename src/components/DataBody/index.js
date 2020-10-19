@@ -27,8 +27,8 @@ const DataBody = () => {
                 <td data-th="Image" className="align-middle">
                   <img
                     src={picture.medium}
-                    alt={"profile image for " + name.first + " " + name.last}
-                    className="img-responsive"
+                    alt={"image for" + name.first + " " + name.last}
+                    className="image-responsive"
                   />
                 </td>
                 <td data-th="Name" className="name-cell align-middle">
@@ -38,7 +38,7 @@ const DataBody = () => {
                   {phone}
                 </td>
                 <td data-th="Email" className="align-middle">
-                  <a href={"mailto:" + email} 
+                  <a href={"mail:" + email} 
                   target="__blank">
                     {email}
                   </a>

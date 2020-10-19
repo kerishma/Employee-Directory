@@ -1,19 +1,17 @@
 import React, { useContext } from "react";
-import "./SearchName.css";
 import DataAreaContext from "../../units/DataAreaContext";
 
 const SearchName = () => {
     const context = useContext(DataAreaContext);
 
     return (
-        <div className="searchbox">
+        <div className="searchB">
             <form className="form-inline">
                 <input
-                    className="form-control mr-sm-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
+                    className="form-control mr-sm-2" 
+                    type="search" 
                     onChange={e => context.handleSearchChange(e)}
+                
                 />
                 <button className="btn my-2 my-sm-0" 
                         type="submit">

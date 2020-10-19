@@ -11,14 +11,26 @@ const DataArea = () => {
     order: 'ascend',
     filteredUsers: [],
     headings: [
-      { name: 'Image', width: '12%' },
-      { name: 'Name', width: '12%' },
+      { name: 'Image', width: '20%' },
+      { name: 'Name', width: '20%' },
       { name: 'Phone', width: '22%' },
       { name: 'Email', width: '22%' },
-      { name: 'dob', width: '12%' },
+      { name: 'dob', width: '20%' },
     ],
   });
+  const handleSearchChange = (event) => {
+    const filter = event.target.value;
+    console.log(filter);
+    const filteredList = developerState.users.filter((item) => {
+      let values = item.name.first.toLowerCase();
+      return values.indexOf(filter.toLowerCase()) !== -1;
+    });
 
+    setDeveloperState({
+      ...developerState,
+      filteredUsers: filteredList,
+    });
+  };
   const handleSort = (heading) => {
     if (developerState.order === 'descend') {
       setDeveloperState({
@@ -64,20 +76,6 @@ const DataArea = () => {
     });
   };
  
-  const handleSearchChange = (event) => {
-    const filter = event.target.value;
-    console.log(filter);
-    const filteredList = developerState.users.filter((item) => {
-      let values = item.name.first.toLowerCase();
-      return values.indexOf(filter.toLowerCase()) !== -1;
-    });
-
-    setDeveloperState({
-      ...developerState,
-      filteredUsers: filteredList,
-    });
-  };
-
   useEffect(() => {
     API.getUsers().then((results) => {
       setDeveloperState({
@@ -86,8 +84,10 @@ const DataArea = () => {
         filteredUsers: results.data.results,
       });
     });
-  }, []);
-
+    }, []);
+  // const fetchDataArea = () => {
+  //   return fetch()
+  // }
   return (
     <DataAreaContext.Provider
       value={{ developerState, handleSearchChange, handleSort }}
